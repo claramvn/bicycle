@@ -1,0 +1,978 @@
+/********************************** Paramètres généraux **********************************/
+
+/* Sélécteur universel pour les boxes */
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Classe ghost / non visible */
+.ghost {
+    display: none;
+}
+
+/* span transparence */
+.espace {
+    color: white;
+}
+
+/* Boutons */
+.boutons {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boutons a {
+    color: white;
+    background: #E06517;
+    text-decoration: none;
+    padding: 1%;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.boutons a:hover {
+    background: #ff5c33;
+}
+
+
+/*******************************************************************************************
+ *************************************** Header **********************************************
+ ******************************************************************************************/
+/* section header */
+header {
+    position: fixed;
+    height: 126px;
+    z-index: 10000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+/* Box header */
+#bloc_header {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5%;
+}
+
+/* Menu header */
+#nav_header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: 15%;
+}
+
+/* Menu Header */
+#nav_header a {
+    text-decoration: none;
+    margin: 15px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Menu header */
+#nav_header a:hover {
+    color: #E06517;
+}
+
+/*******************************************************************************************
+**************************************** INTRO **********************************************
+ ******************************************************************************************/
+
+/* Section INTRO */
+#section_intro {
+    margin-top: 10%;
+    width: 100%;
+}
+
+/* Encadrement orange */
+#background {
+    background: #E06517;
+    padding: 2%;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Titre */
+#presentation {
+    text-align: center;
+    font-weight: bold;
+    background: white;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+#presentation p {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/*******************************************************************************************
+**************************************** DIAPORAMA **********************************************
+ ******************************************************************************************/
+
+#section_slider {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+#section_slider img {
+    width: 100%;
+}
+
+#mainTexte {
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    background: #E06517;
+    font-weight: bold;
+    font-family: 'Arsenal', sans-serif;
+    margin-top: -0.7%;
+}
+
+/* Précédent et Suivant */
+.prev,
+.next {
+    cursor: pointer;
+    width: auto;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #E06517;
+}
+
+/* Position bouton gauche */
+.prev {
+    margin-right: 10%;
+}
+
+/* Position bouton droit */
+.next {
+    margin-left: 10%;
+    border-radius: 5px;
+}
+
+/* Précédent suivant au hover */
+.prev:hover,
+.next:hover {
+    color: white;
+    background-color: rgba(224, 101, 23, 0.5);
+}
+
+/* Play / Pause */
+#intervalles {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 40px;
+    color: #E06517;
+    margin-top: -4.5%;
+    margin-bottom: 1%;
+}
+
+#play {
+    margin-top: 4%;
+}
+
+#pause {
+    margin-top: 4%;
+}
+
+/* Play et pause lors du hover */
+#play:hover,
+#pause:hover {
+    color: rgba(224, 101, 23, 0.7);
+}
+
+/* Indicateurs/ bulles classe */
+#pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.dots {
+    margin-left: 10px;
+    background: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+/* Premier indicateur */
+#dot1 {
+    background-color: #E06517;
+    margin-left: -10px;
+}
+
+/*******************************************************************************************
+**************************************** MAP **********************************************
+ ******************************************************************************************/
+
+/* Section Map */
+#section_map {
+    margin-top: 5%;
+}
+
+/* Barre de séparation */
+#barre {
+    width: 20%;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #E06517;
+    border-radius: 100%;
+}
+
+/* Intro map */
+#intro_map {
+    text-align: center;
+}
+
+/* Légende carte */
+#legende_map {
+    margin-left: 22%;
+    display: flex;
+    font-size: 15px;
+    margin-top: 3%;
+    width: 60%;
+}
+
+#legende_map p {
+    margin-right: 10%;
+}
+
+/* -5 vélos */
+#spanLegende {
+    font-size: 9px;
+    padding-left: 5px;
+}
+
+/* Conteneur carte */
+#conteneur_map {
+    margin-bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Carte */
+#map {
+    width: 60%;
+    height: 854px;
+    border-radius: 15px;
+    border: 2px solid #E06517;
+}
+
+/* Panneau infos station + formulaire */
+#block_form {
+    width: 450px;
+    height: 480px;
+    padding: 0.5%;
+    text-align: center;
+    border: 2px solid #E06517;
+    border-radius: 15px;
+    margin-bottom: 5%;
+}
+
+/* Station */
+#titre {
+    font-size: 20px;
+    margin-top: 10%;
+    font-weight: bold;
+}
+
+/* Adresse */
+#adresse {
+    font-size: 15px;
+    margin-top: -3%;
+    margin-bottom: 8%;
+}
+
+/* Logos */
+#logo_places,
+#logo_velos,
+#emplacement {
+    color: #E06517;
+}
+
+/* Places et Vélos */
+#places,
+#velos,
+#station {
+    padding-left: 3%;
+}
+
+/* Barre de séparation */
+#barre_form {
+    margin-top: 5%;
+    width: 25%;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #E06517;
+    border-radius: 100%;
+}
+
+/* Formulaire */
+#form {
+    margin-top: 8%;
+}
+
+/* bouton formulaire */
+#bouton_form {
+    margin-top: 10%;
+}
+
+/* classe pour asterix mention obligatoire */
+.asterix {
+    color: red;
+    padding-right: 0.5%;
+}
+
+/* Infos astérix */
+.obligatoire {
+    font-size: 8px;
+    padding-left: 14%;
+    font-weight: bold;
+}
+
+/*******************************************************************************************
+**************************************** CANVAS **********************************************
+ ******************************************************************************************/
+
+/* Canvas */
+#canvas {
+    border: 1px solid black;
+    margin: auto;
+}
+
+/* Block Signature */
+#block_signature {
+    width: 450px;
+    height: 350px;
+    border: 2px solid #E06517;
+    text-align: center;
+    padding: 3%;
+    border-radius: 15px;
+}
+
+#block_signature h1 {
+    font-size: 20px;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+
+/* Icône signature */
+#icon_sign {
+    color: #E06517;
+    margin-right: 3%;
+}
+
+/* Infos utilisateurs données personnelles */
+#rgpd {
+    font-size: 9px;
+    text-align: left;
+    margin-left: 14%;
+    margin-top: -1%;
+}
+
+/* Boutons Réservation et Annulation */
+#ensemble_boutons {
+    margin-top: 2%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#ensemble_boutons a {
+    padding: 5% !important;
+}
+
+/*******************************************************************************************
+**************************************** RESERVATION **********************************************
+ ******************************************************************************************/
+
+/* Conteneur Resa */
+#conteneur_timer {
+    text-align: center;
+    font-weight: bold;
+    padding: 2%;
+    background: #E06517;
+    color: white;
+    border-radius: 15px;
+}
+
+/* Design bloc */
+#triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 0 50px;
+    border-color: white transparent transparent transparent;
+    margin: auto;
+    margin-top: -3%;
+    margin-bottom: 2%;
+}
+
+/* Bouton Annulation */
+#boutonStop {
+    text-align: right;
+}
+
+#boutonStop a {
+    background: white;
+    color: #E06517;
+    padding: 0.3%;
+}
+
+#boutonStop a:hover {
+    color: #ff5c33;
+}
+
+/*******************************************************************************************
+**************************************** FOOTER **********************************************
+ ******************************************************************************************/
+
+/* Footer */
+footer {
+    margin-top: 0.5%;
+    padding: 1%;
+    background: #F6F6F6;
+}
+
+#blocFooter {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 3.5%;
+}
+
+#copyrightFooter {
+    font-size: 9px;
+    margin-top: 0.6%;
+    margin-left: 0.1%;
+}
+
+/*******************************************************************************************
+**************************************** MEDIA QUERIES **********************************************
+ ******************************************************************************************/
+
+/* Media queries Petits Mobiles  */
+@media all and (min-width: 320px) and (max-width: 374px) {
+
+    /* Header */
+    header {
+        height: 170px;
+    }
+
+    #bloc_header {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #lien_logo {
+        margin: auto;
+    }
+
+    #logo {
+        width: 200px;
+        margin-top: 0.5%;
+    }
+
+    #nav_header ul {
+        margin-top: 6%;
+    }
+
+    #nav_header li {
+        margin-left: -12%;
+    }
+
+    #nav_header a {
+        margin: 5px;
+        font-size: 15px;
+    }
+
+    /* Intro */
+    #section_intro {
+        width: 100%;
+        margin-top: 60%;
+    }
+
+    #background {
+        width: 95%;
+        border-radius: 0;
+    }
+
+    #presentation h1 {
+        font-size: 15px;
+    }
+
+    #presentation p {
+        font-size: 12px;
+    }
+
+    /* Slider */
+    #section_slider {
+        width: 95%;
+        margin-top: 5%;
+    }
+
+    #mainTexte {
+        font-size: 15px;
+        padding: 10px 10px;
+        margin-top: -1.9%;
+    }
+
+    .dots {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Map */
+    #legende_map {
+        margin-left: 2%;
+        font-size: 12px;
+    }
+
+    #conteneur_map {
+        flex-direction: column;
+    }
+
+    #map {
+        width: 95%;
+        height: 300px;
+        margin: auto;
+    }
+
+    #block_form {
+        width: 95%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #block_form h1 {
+        margin-top: 15%;
+    }
+
+    #bouton_form {
+        margin-top: 17%;
+    }
+
+    /* Canvas */
+    #block_signature {
+        width: 95%;
+        height: 350px;
+        margin: auto;
+    }
+
+    #block_signature h1 {
+        font-size: 18px;
+    }
+
+    #canvas {
+        margin-top: 5%;
+        width: 250px;
+    }
+
+    #ensemble_boutons {
+        margin-top: 12%;
+    }
+
+    /* Réservation */
+    #triangle {
+        border-width: 30px 30px 0 30px;
+    }
+
+    #boutonStop a {
+        padding: 1.5%;
+    }
+
+    /* footer */
+    #copyrightFooter {
+        margin-top: 3%;
+    }
+
+}
+
+/* Media queries Moyens Mobiles  */
+@media all and (min-width: 375px) and (max-width: 424px) {
+
+    /* Header */
+    header {
+        height: 170px;
+    }
+
+    #bloc_header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #lien_logo {
+        margin: auto;
+    }
+
+    #logo {
+        width: 200px;
+        margin-top: 0.5%;
+    }
+
+    #nav_header ul {
+        margin-top: 6%;
+    }
+
+    #nav_header li {
+        margin-left: -12%;
+    }
+
+    #nav_header a {
+        margin: 5px;
+        font-size: 15px;
+    }
+
+    /* Intro */
+    #section_intro {
+        width: 100%;
+        margin-top: 50%;
+    }
+
+    #background {
+        width: 95%;
+        border-radius: 0;
+    }
+
+    #presentation h1 {
+        font-size: 17px;
+    }
+
+    #presentation p {
+        font-size: 14px;
+    }
+
+    /* Slider */
+    #section_slider {
+        width: 95%;
+        margin-top: 5%;
+    }
+
+    #mainTexte {
+        font-size: 15px;
+        padding: 10px 10px;
+        margin-top: -1.4%;
+    }
+
+    .dots {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Map */
+    #legende_map {
+        margin-left: 2.5%;
+        font-size: 14px;
+    }
+
+    #conteneur_map {
+        flex-direction: column;
+    }
+
+    #map {
+        width: 95%;
+        height: 300px;
+        margin: auto;
+    }
+
+    #block_form {
+        width: 95%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #block_form h1 {
+        margin-top: 15%;
+    }
+
+    #bouton_form {
+        margin-top: 15%;
+    }
+
+    /* Canvas */
+    #block_signature {
+        width: 95%;
+        height: 370px;
+        margin: auto;
+    }
+
+    #block_signature h1 {
+        font-size: 19px;
+    }
+
+    #canvas {
+        margin-top: 5%;
+        width: 250px;
+    }
+
+    #ensemble_boutons {
+        margin-top: 8%;
+    }
+
+    /* Reservation */
+    #triangle {
+        border-width: 30px 30px 0 30px;
+    }
+
+    #boutonStop a {
+        padding: 1.5%;
+    }
+
+    /* footer */
+    #copyrightFooter {
+        margin-top: 2.5%;
+    }
+}
+
+/* Media queries Grands Mobiles  */
+@media all and (min-width: 425px) and (max-width: 599px) {
+
+    /* Header */
+    header {
+        height: 170px;
+    }
+
+    #bloc_header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #lien_logo {
+        margin: auto;
+    }
+
+    #logo {
+        width: 220px;
+        margin-top: 0.5%;
+    }
+
+    #nav_header ul {
+        margin-top: 6%;
+    }
+
+    #nav_header li {
+        margin-left: -12%;
+    }
+
+    #nav_header a {
+        margin: 5px;
+        font-size: 15px;
+    }
+
+    /* Intro */
+    #section_intro {
+        width: 100%;
+        margin-top: 45%;
+    }
+
+    #background {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #presentation h1 {
+        font-size: 17px;
+    }
+
+    #presentation p {
+        font-size: 14px;
+    }
+
+    /* Slider */
+    #section_slider {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    #mainTexte {
+        font-size: 15px;
+        padding: 10px 10px;
+        margin-top: -1.4%;
+    }
+
+    .dots {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Map */
+    #legende_map {
+        margin-left: 6%;
+        font-size: 14px;
+    }
+
+    #conteneur_map {
+        flex-direction: column;
+    }
+
+    #map {
+        width: 95%;
+        height: 300px;
+        margin: auto;
+    }
+
+    #block_form {
+        width: 95%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #bouton_form {
+        margin-top: 15%;
+    }
+
+    /* Canvas */
+    #block_signature {
+        width: 95%;
+        margin: auto;
+    }
+
+    #block_signature h1 {
+        font-size: 21px;
+    }
+
+    #canvas {
+        margin-top: 0%;
+        width: 302px;
+    }
+
+    #ensemble_boutons {
+        margin-top: 3%;
+    }
+
+    /* Réservation */
+    #triangle {
+        border-width: 30px 30px 0 30px;
+    }
+
+    #boutonStop a {
+        padding: 1.5%;
+    }
+}
+
+/* Media queries Tablettes  */
+@media all and (min-width: 600px) and (max-width: 1023px) {
+
+    /* Header */
+    #section_intro {
+        margin-top: 20%;
+    }
+
+    /* Slider */
+    #mainTexte {
+        margin-top: -1%;
+    }
+
+    .dots {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* Map */
+    #map {
+        width: 90%;
+    }
+
+    #block_form {
+        width: 350px;
+        margin-left: 1%;
+    }
+
+    #block_form h1 {
+        margin-top: 14%;
+    }
+
+    #block_signature {
+        width: 350px;
+        height: 357px;
+        margin-left: 1%;
+    }
+
+    #block_signature h1 {
+        margin-top: 8%;
+        font-size: 18px;
+    }
+
+    /* Réservation */
+    #triangle {
+        border-width: 30px 30px 0 30px;
+    }
+
+    #boutonStop a {
+        padding: 0.5%;
+    }
+
+    /* footer */
+    #copyrightFooter {
+        margin-top: 1.3%;
+    }
+}
+
+/* Media queries Tablettes/Petits PC  */
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+
+    /* Header */
+    #section_intro {
+        margin-top: 15%;
+    }
+
+    /* Slider */
+    #mainTexte {
+        margin-top: -1%;
+    }
+
+    /* Map */
+    #block_form,
+    #block_signature {
+        width: 430px;
+        margin-left: 1%;
+    }
+
+    #block_form h1 {
+        margin-top: 12%;
+    }
+
+    #form {
+        margin-top: 5%;
+    }
+
+    /* footer */
+    #copyrightFooter {
+        margin-top: 1%;
+    }
+}
+
+/* Media queries grands écrans PC  */
+@media all and (min-width: 2560px) {
+    header {
+        height: 140px;
+    }
+}
