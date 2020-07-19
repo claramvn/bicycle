@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Caractères -->
+    <meta charset="utf-8" />
+    <!-- Mobiles -->
+    <meta name="viewport" content="width=device-width">
+    <title>BICYCLE - Location de vélo</title>
+    <!-- meta tag -->
+    <meta name="description"
+        content="Vous recherchez un moyen de transports dans la région Nantaise ? Réservez votre BICYCLE en ligne ! Trouvez votre station, remplissez le formulaire en ligne et roulez en BICYCLE !" />
+    <meta name="keywords" lang="fr"
+        content=" BICYCLE, location, vélo, carte, stations, places, Nantes, région Nantaise" />
+    <!-- Open graph data -->
+    <meta property="og:title" content="BICYCLE - Location de vélo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/BICYCLE.png" />
+    <meta property="og:description"
+        content="Vous recherchez un moyen de transports dans la région Nantaise ? Réservez votre BICYCLE en ligne !" />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="BICYCLE - Location de vélo" />
+    <meta name="twitter:title" content="BICYCLE" />
+    <meta name="twitter:description"
+        content="Vous recherchez un moyen de transports dans la région Nantaise ? Réservez votre BICYCLE en ligne ! Trouvez votre station, remplissez le formulaire en ligne et roulez en BICYCLE !" />
+    <meta name="twitter:image" content="images/BICYCLE.png" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/FAVICON.png" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Police Google -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Police Google -->
+    <link href="https://fonts.googleapis.com/css?family=Arsenal&display=swap" rel="stylesheet">
+    <!-- Carte Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!--                                          EN-TETE                                                     -->
+    <header>
+        <!-- Logo -->
+        <div id="bloc_header">
+            <a id="lien_logo" href="#"><img id="logo" src="images/BICYCLE.png" alt="Logo Bicloo" /></a>
+
+            <!-- Menu -->
+            <nav id="nav_header">
+                <ul>
+                    <li><a href="#">ACCUEIL</a></li>
+                    <li><a href="#section_intro">FONCTIONNEMENT</a></li>
+                    <li><a href="#section_map">CARTE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--                                          INTRO                                                     -->
+    <section id="section_intro">
+
+        <div id="background">
+            <div id="presentation">
+                <h1>DÉCOUVREZ BICYCLE</h1>
+                <p>Pour vous déplacer sur le territoire de Nantes Métropole selon vos besoins et envies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--                                          DIAPORAMA                                                    -->
+    <div id="section_slider">
+
+        <!-- Images et textes -->
+        <img id="mainImage" src="images/img1.png" alt="image">
+        <p id="mainTexte">COMMENT JE RESERVE UN BICYCLE ?</p>
+
+
+        <!-- Play / Pause -->
+        <div id="intervalles">
+            <a class="prev"><i class="fas fa-chevron-left"></i></a>
+            <a id="play" class="ghost"><i class="fas fa-play-circle"></i></a>
+            <a id="pause"><i class="fas fa-pause-circle"></i></a>
+            <a class="next"><i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <!-- Indicateurs / Bulles -->
+        <div id="pagination">
+            <p id="dot1" class="dots"></p>
+            <p class="dots"></p>
+            <p class="dots"></p>
+            <p class="dots"></p>
+        </div>
+
+    </div>
+
+    <!--                                          MAP                                                   -->
+    <section id="section_map">
+        <div id="intro_map">
+            <div id="barre"></div>
+            <h1>CARTE & STATIONS</h1>
+        </div>
+        <!-- Légende bicycle -->
+        <div id="legende_map">
+            <p><img src="images/green.png" alt="Icônes verts pour vélos disponibles">Bicycle disponibles</p>
+            <p><img src="images/orange.png" alt="Icônes oranges pour peu de vélos disponibles">Bicycle
+                disponible(s)<span id="spanLegende">- de 5 vélos</span></p>
+            <p><img src="images/red.png" alt="Icônes rouges pour vélos indisponibles">Bicycle / Station indisponible</p>
+        </div>
+        <!-- Map -->
+        <div id="conteneur_map">
+            <div id="map"></div>
+            <div id="conteneur_blocks" class="ghost">
+                <!-- Bloc formulaire -->
+                <div id="block_form">
+                    <!-- Informations stations : Station, adresse, places, vélos -->
+                    <p id="titre"><span id="emplacement"><i class="fas fa-map-marked-alt"></i></span><span
+                            id="station"></span></p>
+                    <p id="adresse"></p>
+                    <p><span id="logo_places"><i class="fab fa-product-hunt"></i></span><span id="places"></span></p>
+                    <p><span id="logo_velos"><i class="fas fa-bicycle"></i></span><span id="velos"></span></p>
+                    <div id="barre_form"></div>
+                    <!-- Formulaire -->
+                    <form id="form">
+                        <label>Nom<span class="asterix">*</span><span class="espace">.....</span><span
+                                class="obligatoire">Obligatoire</span></label><br />
+                        <input type="text" id="nom" required /><br /><br />
+                        <label>Prénom<span class="asterix">*</span><span
+                                class="obligatoire">Obligatoire</span></label><br />
+                        <input type="text" id="prenom" required />
+                        <p id="bouton_form" class="boutons"><a href="#block_form">RÉSERVER</a></p>
+                    </form>
+                </div>
+                <!-- Bloc Signature -->
+                <div id="block_signature" class="ghost">
+                    <h1><i id="icon_sign" class="fas fa-signature"></i>Finalisez votre réservation,<br /><span
+                            class="espace">....</span>apposez votre signature :</h1>
+                    <!-- Canvas -->
+                    <canvas id="canvas">Désolé, votre navigateur ne prend pas en charge le canvas.</canvas>
+                    <p id="rgpd"><i class="fas fa-info-circle"></i> Les données saisies ne sont pas exploitées.</p>
+                    <div id="ensemble_boutons">
+                        <p id="reservation" class="boutons"><a href="#reservation">RÉSERVER</a></p>
+                        <p id="effacer" class="boutons"><a href="#block_form">EFFACER</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--                                          RESERVATION                                                   -->
+    <div id="section_timer">
+        <div id="conteneur_timer" class="ghost">
+            <div id="triangle"></div>
+            <!-- Réservation Bicycle à la station ... au nom de ... .... -->
+            <p id="paraResa"></p>
+            <!-- Temps restant : ... min et ... sec -->
+            <p id="paraResa2"></p>
+            <!-- Remerciements -->
+            <p id="paraResa3"></p>
+            <p id="boutonStop" class="boutons"><a href="#annulation">ANNULER</a></p>
+        </div>
+    </div>
+
+    <!--                                          FOOTER                                                   -->
+    <footer>
+        <div id="blocFooter">© BICYCLE <span id="copyrightFooter"> NANTES MÉTROPOLE</span></div>
+    </footer>
+
+
+
+    <!--                                          LEAFLET/AJAX/SCRIPTS                                                  -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <script src="javascript/ajax.js"></script>
+    <script src="javascript/reservation.js"></script>
+    <script src="javascript/canvas.js"></script>
+    <script src="javascript/map.js"></script>
+    <script src="javascript/slider.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+
+</html>
